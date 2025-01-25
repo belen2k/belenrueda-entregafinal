@@ -1,0 +1,22 @@
+{% extends "Appbelen/index.html" %}
+{% load static %}
+{% block contenidoQueCambia %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% block title %} Formulario  Agregar Universidades  {% endblock %}
+</head>
+<body>
+    <h1>Formulario de Registro de Universidades</h1>
+    <form method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="btn btn-primary">Guardar</button>
+    </form>
+</body>
+</html>  
+{% endblock %}

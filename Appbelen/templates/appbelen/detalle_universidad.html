@@ -1,0 +1,29 @@
+{% extends 'Appbelen/index.html' %}
+
+{% load static %}
+
+{% block title %} Detalles de la Universidad {% endblock title %}
+
+{% block contenidoQueCambia %}
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Universidad</th>
+            <th>País</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>{{ universidad.nombre }}</td>
+            <td>{{ universidad.pais }}</td>
+        </str>
+        
+    </tbody>
+</table>
+<p>
+    <a
+        name=""id=""class="btn btn-dark"href="{% url 'lista_universidad' %}"role="button">Regresar</a>
+</p>
+
+{% endblock contenidoQueCambia %}

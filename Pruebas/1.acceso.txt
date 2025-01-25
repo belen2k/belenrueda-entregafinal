@@ -1,0 +1,68 @@
+Pruebas de Conexión y Acceso 
+
+1. Verificar el acceso al sitio principal
+   - URL: http://127.0.0.1:8000/
+   - Esperado:
+     - La página principal carga correctamente.
+     - Se muestra el navbar con las opciones CodificAr Dev Demo("este boton es inicio") ,Buscar Universidades,Docentes,Alumnos,Universidades,Envios,Iniciar sesion y Crear cuenta dependiendo del estado del usuario.
+
+
+
+2. Acceso a las secciones , 2.1: Buscar universidades :Nota el usuario tiene que estar logueado en caso contrario no podra ingresar en esta seccion
+   -Formulario de búsqueda:
+   - URL: http://127.0.0.1:8000/buscar_universidades/
+    -Campo de texto para ingresar el nombre de la universidad.
+    -Botón de búsqueda con el texto "Guardar".
+            -Resultado de búsqueda:
+        -Si existen universidades en la base de datos:
+    -Se muestra una lista con el nombre y país de las universidades encontradas.
+        -Si no existen universidades:
+        -Mensaje: "No se encontraron universidades para la consulta '
+
+
+3. Pruebas de autenticación 
+   - Registro:
+     - URL: http://127.0.0.1:8000/User/register/
+     - Esperado:
+       - Formulario de registro.
+       - Al completar correctamente, el usuario se registrado ya podra iniciar sesion y despues de iniciar sesion el usuario ya va a poder navegar tranquilamente
+   - Login:
+     - URL: http://127.0.0.1:8000/User/login/
+     - Esperado: coderuser/coder2024
+       - Formulario de inicio de sesión.
+       - Al ingresar credenciales válidas, redirige a la página principal.
+   - Logout:
+     - "Cerrar sesion"
+     - Esperado:
+       - El usuario es redirigido a la página principal cambiando las opciones visibles al desplegar el boton que ahora se llamara cuenta aparecera iniciar sesion y registrarse cosa que logueado no apareceria asi 
+       apareceria editar perfil y cerrar sesion
+
+
+4. **Gestión:**
+   - Crear un nuevo Alumno desde `/agregar_alumno/`. - Si el usuario no esta registrado lo deriva al login
+   - Crear un nuevo Docente desde `/agregar_docente/`. - Si el usuario no esta registrado lo deriva al login
+   - Crear una nueva Universidad desde `/agregar_universidad/`. - Si el usuario no esta registrado lo deriva al login
+   - Crear un nuevo Envio desde `/agregar_envio/`. - Si el usuario no esta registrado lo deriva al login
+
+   - Editar un Alumno existente desde `/editar_alumno/`.  Si el usuario no esta registrado lo deriva al login
+   - Editar un Docente existente desde `/editar_docente/`.  Si el usuario no esta registrado lo deriva al login
+   - Editar una Universidad existente desde `/editar_universidad/`.  Si el usuario no esta registrado lo deriva al login
+   - Editar un Envio existente desde `/editar_envio/`.  Si el usuario no esta registrado lo deriva al login
+
+   - Eliminar un alumno existente desde `/eliminar_alumno/`.  Si el usuario no esta registrado lo deriva al login
+   - Eliminar un envio existente desde `/eliminar_envio/`.  Si el usuario no esta registrado lo deriva al login
+   - Eliminar una universidad existente desde `/eliminar_universidad/`.  Si el usuario no esta registrado lo deriva al login
+   - Eliminar un docente existente desde `/eliminar_docente/`.  Si el usuario no esta registrado lo deriva al login
+
+   - Ver el detalle de un alumno en `/detalle_alumno/`. Si el usuario no esta registrado lo deriva al login
+   - Ver el detalle de una universidad en `/detalle_universidad/`. Si el usuario no esta registrado lo deriva al login
+   - Ver el detalle de un envio en `/detalle_envio/`. Si el usuario no esta registrado lo deriva al login
+   - Ver el detalle de un docente en `/detalle_docente/`. Si el usuario no esta registrado lo deriva al login
+
+
+5. **Gestión de perfil:**
+   - Editar el perfil desde `/User/editar_perfil/`.
+   - Editar el perfil desde Dropdown
+   - Eliminar el avatar `/User/eliminar_avatar/`. O desde la edicion tambien se puede
+
+

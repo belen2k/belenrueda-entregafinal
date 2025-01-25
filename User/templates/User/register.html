@@ -1,0 +1,15 @@
+{% extends "Appbelen/index.html" %}
+{% load static %}
+{% block title %} Registrarse {% endblock title %}
+{% block contenidoQueCambia %}
+
+
+
+<form action="" method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit" class="btn btn-success">Guardar</button>
+</form>
+
+
+{% endblock %}

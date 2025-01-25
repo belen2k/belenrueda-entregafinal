@@ -1,0 +1,26 @@
+{% extends "Appbelen/index.html" %}
+{% load static %}
+{% block title %} Iniciar sesion {% endblock title %}
+{% block contenidoQueCambia %}
+
+
+<h1>Editar Perfil</h1>
+
+<form method="POST" enctype="multipart/form-data">
+{% csrf_token %}
+{{ form.as_p }}
+<button type="submit">Guardar Cambios</button>
+</form>
+
+{% if avatar %}
+<h3>Tu Avatar:</h3>
+    <img src="{{ avatar.imagen.url }}" alt="Avatar" width="100" height="100">
+<form method="POST" action="{% url 'eliminar_avatar' %}" style="display:inline;">
+    {% csrf_token %}
+    <button type="submit">Eliminar Avatar</button>
+</form>
+{% endif %}
+
+
+
+{% endblock %}

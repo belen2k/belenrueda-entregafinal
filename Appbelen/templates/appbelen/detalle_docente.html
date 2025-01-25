@@ -1,0 +1,32 @@
+{% extends 'Appbelen/index.html' %}
+
+{% load static %}
+
+{% block title %} Detalles del Docente {% endblock title %}
+
+{% block contenidoQueCambia %}
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Docente</th>
+            <th>Apellido</th>
+            <th>Email</th>
+            <th>Profesion</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>{{ docente.nombre }}</td>
+            <td>{{ docente.apellido }}</td>
+            <td>{{ docente.email }}</td>
+            <td>{{ docente.profesion }}</td>
+        </tr>
+    </tbody>
+</table>    
+<p>
+    <a
+        name=""id=""class="btn btn-dark"href="{% url 'lista_docente' %}"role="button">Regresar</a>
+</p>
+
+{% endblock contenidoQueCambia %}

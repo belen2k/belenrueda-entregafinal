@@ -1,0 +1,25 @@
+{% extends "Appbelen/index.html" %}
+{% load static %}
+{% block title %} Perfil {% endblock title %}
+{% block contenidoQueCambia %}
+
+<h4>
+    <strong>Usuario:</strong> {{ user.username }} </br>
+    <strong>Email:</strong> {{ user.email }} </br>
+    <strong>Apellido:</strong> {{ user.last_name }} </br>
+    <strong>Nombre:</strong> {{ user.first_name }} </br>
+    {% if request.user.avatar %}
+                            <!-- Mostrar el avatar del usuario -->
+        <img src="{{ request.user.avatar.imagen.url }}" alt="Avatar" style="height: 50px; width: 50px;">
+    {% else %}
+                            <!-- Mostrar la imagen por defecto si no tiene avatar -->
+        <img src="{% static 'img/default_avatar.png' %}" alt="Avatar por defecto" style="height: 50px; width: 50px;">
+    {% endif %}
+
+    <a href="{% url 'editar_usuario' %}" class="btn btn-dark">Editar Perfil</a>
+
+</h4>
+
+
+
+{% endblock %}

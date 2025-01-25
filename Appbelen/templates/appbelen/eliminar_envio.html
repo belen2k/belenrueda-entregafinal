@@ -1,0 +1,25 @@
+{% extends "Appbelen/index.html" %}
+{% load static %}
+{% block contenidoQueCambia %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% block title %} Eliminar Envios {% endblock %}
+</head>
+<body>
+    <h3>Formulario de Eliminacion de Envios</h3>
+    <form action="" method="POST">
+        {% csrf_token %}
+
+        <p>¿Estás seguro que deseas borrar el envio de "{{ object }}"?</p>
+        <button type="submit" class="btn btn-danger">Borrar</button>
+
+    </form>
+    </form>
+</body>
+</html>  
+{% endblock %}

@@ -1,0 +1,32 @@
+{% extends 'Appbelen/index.html' %}
+
+{% load static %}
+
+{% block title %} Detalles del Envio {% endblock title %}
+
+{% block contenidoQueCambia %}
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Alumno</th>
+            <th>Descripcion</th>
+            <th>Fecha De Entrega</th>
+            <th>Entregado</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>{{ envio.nombre }}</td>
+            <td>{{ envio.descripcion }}</td>
+            <td>{{ envio.fecha_de_entrega }}</td>
+            <td>{{ envio.entregado }}</td>
+        </tr>
+    </tbody>
+</table>    
+<p>
+    <a
+        name=""id=""class="btn btn-dark"href="{% url 'lista_envio' %}"role="button">Regresar</a>
+</p>
+
+{% endblock contenidoQueCambia %}

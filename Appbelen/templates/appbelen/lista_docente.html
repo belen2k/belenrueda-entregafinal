@@ -1,0 +1,38 @@
+{% extends 'appbelen/index.html' %} <!-- Cambia a la base que uses en tu proyecto -->
+
+{% block title %}Lista de Alumnos{% endblock %}
+
+{% block contenidoQueCambia %}
+<div class = "card-header">
+    <a name=""id=""class="btn btn-primary"href="{% url 'agregar_docente'  %}"role="button">Agregar nuevo Docente</a>
+    
+</div>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>Correo Electronico</th>
+            <th>Profesion</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for docente in object_list %}
+        <tr>
+            <td>{{ docente.nombre }}</td>
+            <td>{{ docente.apellido }}</td>
+            <td>{{ docente.email }}</td>
+            <td>{{ docente.profesion }}</td>
+            <th>     
+                <a name=""id=""class="btn btn-info"href="{% url 'editar_docente' docente.id %}"role="button">Editar</a>
+                | 
+                <a name=""id=""class="btn btn-danger"href="{% url 'eliminar_docente' docente.id %}"role="button">Borrar</a>
+                |
+                <a name=""id=""class="btn btn-warning"href="{% url 'detalle_docente' docente.id %}"role="button">Detalles</a>
+            </th>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}
