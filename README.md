@@ -1,5 +1,5 @@
 Proyecto Final - Gestión de Perfiles
-Este proyecto es el resultado final del curso de Python de CoderHouse, desarrollado por Julian Salas. Se trata de una aplicación web diseñada para gestionar perfiles relacionados con universidades, docentes, alumnos y envíos. Proporciona herramientas para agregar, editar y visualizar información relevante de cada perfil.
+ Se trata de una aplicación web diseñada para gestionar perfiles relacionados con universidades, docentes, alumnos y envíos. Proporciona herramientas para agregar, editar y visualizar información relevante de cada perfil.
 
 Características
 Gestión de perfiles de universidades, docentes, alumnos y envíos.
